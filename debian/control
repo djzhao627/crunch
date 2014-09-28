@@ -1,0 +1,23 @@
+Source: crunch
+Section: misc
+Priority: optional
+Maintainer: Marcio de Souza Oliveira <m.desouza20@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: http://sourceforge.net/projects/crunch-wordlist/
+Vcs-Git: git://github.com/marciosouza20/crunch
+Vcs-Browser: http://github.com/marciosouza20/crunch
+
+Package: crunch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: xz-utils | lzma, bzip2, p7zip-full
+Description: tool for creating wordlist
+ Crunch is a wordlist generator where you can specify a standard
+ character set or any set of characters to be used in generating
+ the wordlists. The wordlists are created through combination and
+ permutation of a set of characters. You can determine the amount
+ of characters and list size.
+ .
+ This program supports numbers and symbols, upper and lower case
+ characters separately and Unicode.

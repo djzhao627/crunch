@@ -1,0 +1,16 @@
+Description: Added backslash before the hyphen option -s
+Author: Marcio de Souza Oliveira <m.desouza20@gmail.com>
+Last-Update: 2014-06-20
+Index: crunch-3.6/crunch.1
+===================================================================
+--- crunch-3.6.orig/crunch.1
++++ crunch-3.6/crunch.1
+@@ -72,7 +72,7 @@ Specifies the file to write the output t
+ .HP
+ \-p charset OR \-p word1 word2 ...
+ .br
+-Tells crunch to generate words that don't have repeating characters.  By default crunch will generate a wordlist size of #of_chars_in_charset ^ max_length.  This option will instead generate #of_chars_in_charset!.  The ! stands for factorial.  For example say the charset is abc and max length is 4..  Crunch will by default generate 3^4 = 81 words.  This option will instead generate 3! = 3x2x1 = 6 words (abc, acb, bac, bca, cab, cba).  THIS MUST BE THE LAST OPTION!  This option CANNOT be used with -s and it ignores min and max length however you must still specify two numbers.
++Tells crunch to generate words that don't have repeating characters.  By default crunch will generate a wordlist size of #of_chars_in_charset ^ max_length.  This option will instead generate #of_chars_in_charset!.  The ! stands for factorial.  For example say the charset is abc and max length is 4..  Crunch will by default generate 3^4 = 81 words.  This option will instead generate 3! = 3x2x1 = 6 words (abc, acb, bac, bca, cab, cba).  THIS MUST BE THE LAST OPTION!  This option CANNOT be used with \-s and it ignores min and max length however you must still specify two numbers.
+ .HP
+ \-q filename.txt
+ .br

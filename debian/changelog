@@ -1,0 +1,14 @@
+crunch (3.6-2) unstable; urgency=medium
+
+  * Updated the Standards-Version to 3.9.6.
+  * Implemented hardening through the rules file.
+  * Fixed bug in the watch file.
+  * Fixed name of the maintainer.
+
+ -- Marcio de Souza Oliveira <m.desouza20@gmail.com>  Sun, 28 Sep 2014 20:50:21 -0300
+
+crunch (3.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #608645)
+
+ -- Marcio de Souza Olivera <m.desouza20@gmail.com>  Fri, 4 Jul 2014 14:49:07 -0300

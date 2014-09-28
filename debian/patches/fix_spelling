@@ -1,0 +1,123 @@
+Description: Fix spelling errors
+Author: Marcio de Souza Oliveira <m.desouza20@gmail.com>
+Last-Update: 2014-02-06
+Index: crunch-3.6/crunch.c
+===================================================================
+--- crunch-3.6.orig/crunch.c
++++ crunch-3.6/crunch.c
+@@ -42,7 +42,7 @@
+  *                 programs can't access files of this size (john the ripper for example)
+  *              This support works on Ubuntu intrepid.  This probably works on most Linux
+  *                 platforms.  Support for Solaris, HP-UX, Windows, BSD is unknown.
+- *  version 1.6 add option (-p) to support factorial instead of exponentail processing.  i.e.
++ *  version 1.6 add option (-p) to support factorial instead of exponential processing.  i.e.
+  *                 if you did ./crunch 3 3 abc you would get 27 results (3x3x3): a through ccc
+  *                 This new option will give you 6 results (3! = 3x2x1)
+  *                 i.e. (abc, acb, bac, bca, cab, cba)
+@@ -113,7 +113,7 @@
+  *              add -u option to suppress all filesize and linecount so crunch
+  *                 can feed another program
+  *              fork a child process for progress %%
+- *              Niclas Kroon added swedish characters to the charset.lst
++ *              Niclas Kroon added Swedish characters to the charset.lst
+  *              permute supports -t
+  *              added -std=c99 to Makefile since unsigned long long isn't in c89
+  *              ran valgrind and fixed a small memory issue.  I forgot to allocate
+@@ -1766,7 +1766,7 @@ wchar_t *block2;      /* block is word b
+ 
+             renamefile(((wordlength*2)+5), fpath, outputfilename, compressalgo);
+             if ((fptr = fopen(fpath, "w")) == NULL) {
+-              fprintf(stderr,"permute2: Ouput file START could not be opened\n");
++              fprintf(stderr,"permute2: Output file START could not be opened\n");
+               exit(EXIT_FAILURE);
+             }
+             my_thread.linecounter = 0;
+@@ -1834,7 +1834,7 @@ wchar_t *block2;      /* block is word b
+ 
+               renamefile(((wordlength*2)+5), fpath, outputfilename, compressalgo);
+               if ((fptr = fopen(fpath, "w")) == NULL) {
+-                fprintf(stderr,"permute2: Ouput file START could not be opened\n");
++                fprintf(stderr,"permute2: Output file START could not be opened\n");
+                 free(block2);
+                 exit(EXIT_FAILURE);
+               }
+@@ -2107,7 +2107,7 @@ size_t outlen; /* temp for size of narro
+ 
+             if ((options.endstring == NULL) || (wcsncmp(block2,options.endstring,wcslen(options.endstring)) != 0)) {
+               if ((fptr = fopen(fpath, "w")) == NULL) {
+-                fprintf(stderr,"chunk2: Ouput file START could not be opened\n");
++                fprintf(stderr,"chunk2: Output file START could not be opened\n");
+                 free(block2);
+                 exit(EXIT_FAILURE);
+               }
+@@ -2175,7 +2175,7 @@ size_t outlen; /* temp for size of narro
+ 
+ static void usage() {
+   fprintf(stderr,"crunch version %s\n\n", version);
+-  fprintf(stderr,"Crunch can create a wordlist based on criteria you specify.  The outout from crunch can be sent to the screen, file, or to another program.\n\n");
++  fprintf(stderr,"Crunch can create a wordlist based on criteria you specify.  The output from crunch can be sent to the screen, file, or to another program.\n\n");
+   fprintf(stderr,"Usage: crunch <min> <max> [options]\n");
+   fprintf(stderr,"where min and max are numbers\n\n");
+   fprintf(stderr,"Please refer to the man page for instructions and examples on how to use crunch.\n");
+@@ -2328,12 +2328,12 @@ static void copy_without_dupes(wchar_t*
+ 
+ int main(int argc, char **argv) {
+ size_t flag = 0;   /* 0 for chunk 1 for permute */
+-size_t flag3 = 0;  /* 0 display file size info 1 supress file size info */
++size_t flag3 = 0;  /* 0 display file size info 1 suppress file size info */
+ size_t flag4 = 0;  /* 0 don't create thread 1 create print % done thread */
+ size_t resume = 0; /* 0 new session 1 for resume */
+ size_t arglen = 0; /* used in -b option to hold strlen */
+ size_t min, max;   /* minimum and maximum size */
+-size_t temp;       /* temp varible */
++size_t temp;       /* temp variable */
+ size_t templen;    /* another temp var */
+ 
+ unsigned long calc = 0;  /* recommend count */
+@@ -2574,7 +2574,7 @@ pthread_t threads;
+           fprintf(stderr,"Some applications (john the ripper) can't use wordlists greater than 2GB\n");
+           fprintf(stderr,"A value of %lu ",calc);
+           fprintf(stderr,"or less should result in a file less than 2GB\n");
+-          fprintf(stderr,"The above value is calcualated based on 2147483648UL/max\n");
++          fprintf(stderr,"The above value is calculated based on 2147483648UL/max\n");
+           exit(EXIT_FAILURE);
+         }
+       }
+Index: crunch-3.6/crunch.1
+===================================================================
+--- crunch-3.6.orig/crunch.1
++++ crunch-3.6/crunch.1
+@@ -24,7 +24,7 @@ crunch \- generate wordlists from a char
+ .SH SYNOPSIS
+ crunch <min-len> <max-len> [<charset string>] [options]
+ .SH DESCRIPTION
+-Crunch can create a wordlist based on criteria you specify.  The outout from crunch can be sent to the screen, file, or to another program.  The required parameters are:
++Crunch can create a wordlist based on criteria you specify.  The output from crunch can be sent to the screen, file, or to another program.  The required parameters are:
+ .HP
+ min-len
+ .br
+@@ -303,13 +303,13 @@ Example 19
+ .br
+ crunch 8 8 \-d 2@
+ .br
+-crunch will gernerate 8 characters that limit the same number of lower case characters to 2.  Crunch will start at aabaabaa and end at zzyzzyzz.
++crunch will generate 8 characters that limit the same number of lower case characters to 2.  Crunch will start at aabaabaa and end at zzyzzyzz.
+ .PP
+ Example 20
+ .br
+ crunch 4 4 \-f unicode_test.lst japanese \-t @@%% \-l @xdd
+ .br
+-crunch will load some japanese characters from the unicode_test character set file.  The output will start at @日00 and end at @語99.
++crunch will load some Japanese characters from the unicode_test character set file.  The output will start at @日00 and end at @語99.
+ .SH REDIRECTION
+ .PP
+ You can use crunch's output and pipe it into other programs.  The two most popular programs to pipe crunch into are: aircrack-ng and airolib-ng.  The syntax is as follows:
+@@ -331,7 +331,7 @@ receive the % done.
+ .PP
+ 6. Some output is missing.  A file didn't get generated.
+ .br
+-The mostly explaination is you ran out of disk space.  If you have verified you have plenty of disk space then the problem is most likely the filename begins with a period.  In Linux filenames that begin with a period are hidden.  To view them do a ls \-l .*
++The mostly explanation is you ran out of disk space.  If you have verified you have plenty of disk space then the problem is most likely the filename begins with a period.  In Linux filenames that begin with a period are hidden.  To view them do a ls \-l .*
+ .PP
+ 7. Crunch says The maximum and minimum length should be the same size as the pattern you specified, however the length is set correctly.
+ .br

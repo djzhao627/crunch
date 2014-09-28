@@ -1,0 +1,29 @@
+Description: Remove sudo from the makefile, fix permissions charset.lst
+             file and prevents the installation file COPYING.
+Author: Marcio de Souza Oliveira <m.desouza20@gmail.com>
+Last-Update: 2014-06-09
+Index: crunch-3.6/Makefile
+===================================================================
+--- crunch-3.6.orig/Makefile
++++ crunch-3.6/Makefile
+@@ -37,7 +37,7 @@ SHAREDIR    = $(PREFIX)/share/$(PACKAGE)
+ DOCDIR	    = $(PREFIX)/share/doc/$(PACKAGE)
+ MANDIR	    = $(PREFIX)/share/man/man1
+ 
+-INSTALL	    = sudo $(shell which install)
++INSTALL	    = $(shell which install)
+ CC	    = $(shell which gcc)
+ LIBFLAGS    = -lm
+ THREADFLAGS = -pthread
+@@ -92,9 +92,9 @@ install: build
+ 	@echo "Copying binary..."
+ 	$(INSTALL) crunch $(DESTDIR)$(BINDIR)
+ 	@echo "Copying charset.lst..."
+-	$(INSTALL) charset.lst $(DESTDIR)$(SHAREDIR)
++	$(INSTALL) -m 644 charset.lst $(DESTDIR)$(SHAREDIR)
+ 	@echo "Copying COPYING..."
+-	$(INSTALL) COPYING $(DESTDIR)$(DOCDIR)
++#	$(INSTALL) COPYING $(DESTDIR)$(DOCDIR)
+ 	@echo "Installing man page..."
+ 	$(INSTALL) crunch.1 $(DESTDIR)$(MANDIR)
+ 	@echo ""
