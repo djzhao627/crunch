@@ -4,7 +4,4 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
-	dh $@ --parallel
-
-override_dh_installchangelogs:
-	dh_installchangelogs debian/changelog.upstream
+	dh $@

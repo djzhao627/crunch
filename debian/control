@@ -1,12 +1,12 @@
 Source: crunch
 Section: misc
 Priority: optional
-Maintainer: Marcio de Souza Oliveira <m.desouza20@gmail.com>
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.6
+Maintainer: Marcio de Souza Oliveira <marciosouza@debian.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.0
 Homepage: http://sourceforge.net/projects/crunch-wordlist/
-Vcs-Git: git://github.com/marciosouza20/crunch
-Vcs-Browser: http://github.com/marciosouza20/crunch
+Vcs-Git: https://salsa.debian.org/debian/crunch.git
+Vcs-Browser: https://salsa.debian.org/debian/crunch
 
 Package: crunch
 Architecture: any

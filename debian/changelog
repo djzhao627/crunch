@@ -1,3 +1,17 @@
+crunch (3.6-3) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped DH level to 13.
+      - Bumped Standards-Version to 4.5.0.
+      - Updated the maintainer email.
+      - Updated the Vcs-* fields to use Salsa repository.
+  * debian/rules:
+      - Removed --parallel option.
+      - Removed the override of dh_installchangelogs.
+  * Removed the file /debian/compat.
+
+ -- Marcio de Souza Oliveira <marciosouza@debian.org>  Sat, 23 May 2020 22:16:49 +0000
+
 crunch (3.6-2) unstable; urgency=medium
 
   * Updated the Standards-Version to 3.9.6.
@@ -5,7 +19,7 @@ crunch (3.6-2) unstable; urgency=medium
   * Fixed bug in the watch file.
   * Fixed name of the maintainer.
 
- -- Marcio de Souza Oliveira <m.desouza20@gmail.com>  Sun, 28 Sep 2014 20:50:21 -0300
+ -- Marcio de Souza Oliveira <marciosouza@debian.org>  Sat, 23 May 2020 22:14:46 +0000
 
 crunch (3.6-1) unstable; urgency=low
 
