@@ -1,0 +1,2 @@
+Test-Command: crunch 4 4
+Restrictions: allow-stderr

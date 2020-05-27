@@ -5,6 +5,7 @@ Maintainer: Marcio de Souza Oliveira <marciosouza@debian.org>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.5.0
 Homepage: http://sourceforge.net/projects/crunch-wordlist/
+Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/debian/crunch.git
 Vcs-Browser: https://salsa.debian.org/debian/crunch
 

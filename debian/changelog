@@ -1,6 +1,7 @@
 crunch (3.6-3) unstable; urgency=medium
 
   * debian/control:
+      - Added flag 'Rules-Requires-Root: no'.
       - Bumped DH level to 13.
       - Bumped Standards-Version to 4.5.0.
       - Updated the maintainer email.
@@ -8,6 +9,10 @@ crunch (3.6-3) unstable; urgency=medium
   * debian/rules:
       - Removed --parallel option.
       - Removed the override of dh_installchangelogs.
+  * debian/salsa-ci.yml:
+      - Added to provide CI tests for Salsa.
+  * debian/tests/control:
+      - Created to perform a simple test.
   * Removed the file /debian/compat.
 
  -- Marcio de Souza Oliveira <marciosouza@debian.org>  Sat, 23 May 2020 22:16:49 +0000
