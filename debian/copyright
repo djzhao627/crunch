@@ -1,22 +1,22 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: crunch
 Source: http://sourceforge.net/projects/crunch-wordlist/
 
 Files: *
 Copyright: 2004 mimayin@aciiid.ath.cx
            2008-2014 Jason <bofh28@gmail.com>
-License: GPL-2.0
+License: GPL-2
 
 Files: debian/*
-Copyright: 2014 Marcio de Souza Oliveira <m.desouza20@gmail.com>
-License: GPL-2.0
+Copyright: 2014-2020 Marcio de Souza Oliveira <marciosouza@debian.org>
+License: GPL-2
 
-License: GPL-2.0
+License: GPL-2
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; version 2 only of the License.
  .
- This package is distributed in the hope that it will be useful,
+ This package is distributed in the hope that it will be useful
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.

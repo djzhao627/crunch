@@ -1,2 +1,2 @@
-version=3
-http://sf.net/crunch-wordlist/ .*crunch-(\d\S+)\.(?:tgz|tar\.(?:bz2|gz|xz))
+version=4
+https://sf.net/crunch-wordlist/ .*crunch-(\d\S+)\.(?:tgz|tar\.(?:bz2|gz|xz))

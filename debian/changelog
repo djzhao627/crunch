@@ -6,6 +6,9 @@ crunch (3.6-3) unstable; urgency=medium
       - Bumped Standards-Version to 4.5.0.
       - Updated the maintainer email.
       - Updated the Vcs-* fields to use Salsa repository.
+  * debian/copyright:
+      - Updated the Format URI to use HTTPS.
+      - Updated maintainer e-mail.
   * debian/patches:
       - Renamed the patch fix_spelling to 01_fix_spelling.patch.
       - Renamed the patch fix_manpage to 02_fix_manpage.patch.
@@ -20,6 +23,9 @@ crunch (3.6-3) unstable; urgency=medium
       - Added to provide CI tests for Salsa.
   * debian/tests/control:
       - Created to perform a simple test.
+  * debian/watch:
+      - Updated to use version 4.
+      - Updated to use HTTPS.
   * Removed the file /debian/compat.
 
  -- Marcio de Souza Oliveira <marciosouza@debian.org>  Sat, 23 May 2020 22:16:49 +0000
