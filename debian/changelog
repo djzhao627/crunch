@@ -10,6 +10,8 @@ crunch (3.6-3) unstable; urgency=medium
       - Renamed the patch fix_spelling to 01_fix_spelling.patch.
       - Renamed the patch fix_manpage to 02_fix_manpage.patch.
       - Renamed the patch fix_makefile to 03_fix_makefile.patch.
+      - Updated the patch 03_fix_makefile.patch to get the current
+        user to install options.
       - Updated the series file.
   * debian/rules:
       - Removed --parallel option.

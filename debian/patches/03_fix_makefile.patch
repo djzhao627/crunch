@@ -1,11 +1,12 @@
 Description: Remove sudo from the makefile, fix permissions charset.lst
-             file and prevents the installation file COPYING.
+             file, prevents the installation file COPYING and get the
+             current user to set install options.
 Author: Marcio de Souza Oliveira <m.desouza20@gmail.com>
-Last-Update: 2014-06-09
-Index: crunch-3.6/Makefile
+Last-Update: 2020-06-03
+Index: crunch/Makefile
 ===================================================================
---- crunch-3.6.orig/Makefile
-+++ crunch-3.6/Makefile
+--- crunch.orig/Makefile
++++ crunch/Makefile
 @@ -37,7 +37,7 @@ SHAREDIR    = $(PREFIX)/share/$(PACKAGE)
  DOCDIR	    = $(PREFIX)/share/doc/$(PACKAGE)
  MANDIR	    = $(PREFIX)/share/man/man1
@@ -15,6 +16,23 @@ Index: crunch-3.6/Makefile
  CC	    = $(shell which gcc)
  LIBFLAGS    = -lm
  THREADFLAGS = -pthread
+@@ -49,14 +49,14 @@ LFS	    = $(shell getconf POSIX_V6_ILP32
+ 
+ ifeq ($(UNAME_LOOKUP),Darwin)
+ #Darwin = OS X, and os x does not use root root as stated in email
+-  INSTALL_OPTIONS = -g wheel -o root
++  INSTALL_OPTIONS = -g $(shell id -gn) -o $(shell id -un)
+ # changing the CC flag from gcc is optional but Apple recommneds using LLVM clang compiler instad of gcc so it's a good practice to do so in an OS X enviro, alas not compulsory 
+   CC = $(shell which cc)
+ #LFS flag HAS TO BE reset or it's a no-go :(
+  LFS=""  
+ else
+ #non-mac as you were 
+-  INSTALL_OPTIONS = -g root -o root
++  INSTALL_OPTIONS = -g $(shell id -gn) -o $(shell id -un)
+ endif
+ 
+ # Default target
 @@ -92,9 +92,9 @@ install: build
  	@echo "Copying binary..."
  	$(INSTALL) crunch $(DESTDIR)$(BINDIR)
