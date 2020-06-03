@@ -6,6 +6,11 @@ crunch (3.6-3) unstable; urgency=medium
       - Bumped Standards-Version to 4.5.0.
       - Updated the maintainer email.
       - Updated the Vcs-* fields to use Salsa repository.
+  * debian/patches:
+      - Renamed the patch fix_spelling to 01_fix_spelling.patch.
+      - Renamed the patch fix_manpage to 02_fix_manpage.patch.
+      - Renamed the patch fix_makefile to 03_fix_makefile.patch.
+      - Updated the series file.
   * debian/rules:
       - Removed --parallel option.
       - Removed the override of dh_installchangelogs.
