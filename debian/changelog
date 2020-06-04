@@ -23,6 +23,8 @@ crunch (3.6-3) unstable; urgency=medium
       - Added to provide CI tests for Salsa.
   * debian/tests/control:
       - Created to perform a simple test.
+  * debian/upstream/metadata:
+      - Created to provide meta-information about upstream project.
   * debian/watch:
       - Updated to use version 4.
       - Updated to use HTTPS.
