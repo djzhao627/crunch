@@ -28,6 +28,7 @@ crunch (3.6-3) unstable; urgency=medium
   * debian/watch:
       - Updated to use version 4.
       - Updated to use HTTPS.
+  * Ran wrap-and-sort.
   * Removed the file /debian/compat.
 
  -- Marcio de Souza Oliveira <marciosouza@debian.org>  Sat, 23 May 2020 22:16:49 +0000
