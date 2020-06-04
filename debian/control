@@ -11,8 +11,8 @@ Vcs-Browser: https://salsa.debian.org/debian/crunch
 
 Package: crunch
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Suggests: xz-utils | lzma, bzip2, p7zip-full
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: bzip2, p7zip-full, xz-utils | lzma
 Description: tool for creating wordlist
  Crunch is a wordlist generator where you can specify a standard
  character set or any set of characters to be used in generating
